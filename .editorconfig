@@ -1,0 +1,35 @@
+[*]
+
+# Also set it in the IDE:
+#   Visual Studio: Options > Environment > Documents > Save files with a specific encoding
+#   Rider: Settings > Editor > File Encodings
+charset = utf-8
+
+# lf, crlf, cr, comment it out for 'auto'
+end_of_line = lf
+
+# if using tabs, use the same value for both indent_size and tab_width
+indent_style = space
+indent_size = 2
+tab_width = 2
+
+# 80-120 if fitment in diff view is preferred, 120+ if widescreen space usage is preferred
+max_line_length = 100
+
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+# Add more xml-like file types here to format them with csharpier
+[*.{xml,config,csproj,props,slnx,targets,xaml}]
+csharpier_formatter = xml
+
+[*.cs]
+
+#### C# Formatting rules ####
+indent_size = 4
+
+# disable VS/dotnet-format formatting analyzer
+dotnet_diagnostic.IDE0055.severity = none
+
+# TODO: disable rules about sorting using statements
+# TODO: disable rules about adding commas after the last element in a multiline list, or an initializer block

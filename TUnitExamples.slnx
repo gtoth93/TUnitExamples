@@ -1,0 +1,16 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path=".editorconfig" />
+    <File Path=".gitattributes" />
+    <File Path=".gitignore" />
+    <File Path="Directory.Build.props" />
+    <File Path="Directory.Packages.props" />
+    <File Path="dotnet-tools.json" />
+    <File Path="global.json" />
+    <File Path="mise.toml" />
+    <File Path="TUnitExamples.sln.DotSettings" />
+  </Folder>
+  <Project Path="TUnitExamples.Common/TUnitExamples.Common.csproj" />
+  <Project Path="TUnitExamples.TUnit/TUnitExamples.TUnit.csproj" />
+  <Project Path="TUnitExamples.xUnit/TUnitExamples.xUnit.csproj" />
+</Solution>

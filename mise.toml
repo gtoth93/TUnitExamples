@@ -1,0 +1,34 @@
+[tasks.build]
+usage = 'arg "[configuration]" default="Debug"'
+depends = ["format"]
+description = "Builds the solution"
+run = 'dotnet build --configuration {{ usage.configuration }}'
+
+[tasks.format]
+description = "Formats the solution"
+run = "dotnet csharpier format ."
+
+[tasks.test]
+usage = 'arg "[configuration]" default="Debug"'
+depends = ["test-tunit {{usage.configuration}}", "test-xunit {{usage.configuration}}"]
+description = "Runs all tests"
+
+[tasks.test-tunit]
+usage = 'arg "[configuration]" default="Debug"'
+depends = ["build {{usage.configuration}}"]
+description = "Runs TUnit tests"
+run = "dotnet run --project TUnitExamples.TUnit --configuration {{usage.configuration}} --coverage --coverage-output-format cobertura --report-trx --results-directory ./TestResults/TUnit"
+
+[tasks.test-xunit]
+usage = 'arg "[configuration]" default="Debug"'
+depends = ["build {{usage.configuration}}"]
+description = "Runs xUnit tests"
+run = "dotnet run --project TUnitExamples.xUnit --configuration {{usage.configuration}} --coverage --coverage-output-format cobertura --report-xunit-trx --results-directory ./TestResults/xUnit"
+
+[tasks.tunit-report]
+description = "Generates a coverage report from TUnit coverage files"
+run = "dotnet reportgenerator -reports:./TestResults/TUnit/**/*.cobertura.xml -targetdir:./TestResults/TUnit/coveragereport"
+
+[tasks.xunit-report]
+description = "Generates a coverage report from xUnit coverage files"
+run = "dotnet reportgenerator -reports:./TestResults/xUnit/**/*.cobertura.xml -targetdir:./TestResults/xUnit/coveragereport"
