@@ -1,4 +1,4 @@
-namespace TUnitExamples.TUnit.Data;
+namespace TUnitExamples.TUnitRunner.Data;
 
 public class AdditionDataGeneratorAttribute : DataSourceGeneratorAttribute<int, int, int>
 {

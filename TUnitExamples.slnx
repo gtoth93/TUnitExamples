@@ -7,10 +7,14 @@
     <File Path="Directory.Packages.props" />
     <File Path="dotnet-tools.json" />
     <File Path="global.json" />
+    <File Path="LICENSE" />
     <File Path="mise.toml" />
+    <File Path="README.md" />
     <File Path="TUnitExamples.sln.DotSettings" />
   </Folder>
   <Project Path="TUnitExamples.Common/TUnitExamples.Common.csproj" />
-  <Project Path="TUnitExamples.TUnit/TUnitExamples.TUnit.csproj" />
-  <Project Path="TUnitExamples.xUnit/TUnitExamples.xUnit.csproj" />
+  <Project Path="TUnitExamples.TUnitLibrary/TUnitExamples.TUnitLibrary.csproj" />
+  <Project Path="TUnitExamples.TUnitRunner/TUnitExamples.TUnitRunner.csproj" />
+  <Project Path="TUnitExamples.TUnitRunner2/TUnitExamples.TUnitRunner2.csproj" />
+  <Project Path="TUnitExamples.xUnitRunner/TUnitExamples.xUnitRunner.csproj" />
 </Solution>

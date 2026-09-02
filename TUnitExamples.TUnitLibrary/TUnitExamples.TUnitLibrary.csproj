@@ -1,0 +1,6 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <PackageReference Include="Testcontainers.Redis" />
+    <PackageReference Include="TUnit.Core" />
+  </ItemGroup>
+</Project>

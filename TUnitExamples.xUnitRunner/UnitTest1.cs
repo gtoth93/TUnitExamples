@@ -1,4 +1,4 @@
-namespace TUnitExamples.xUnit;
+namespace TUnitExamples.xUnitRunner;
 
 public class UnitTest1
 {

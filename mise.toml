@@ -17,13 +17,13 @@ description = "Runs all tests"
 usage = 'arg "[configuration]" default="Debug"'
 depends = ["build {{usage.configuration}}"]
 description = "Runs TUnit tests"
-run = "dotnet run --project TUnitExamples.TUnit --configuration {{usage.configuration}} --coverage --coverage-output-format cobertura --report-trx --results-directory ./TestResults/TUnit"
+run = "dotnet test --test-modules **/bin/{{usage.configuration}}/net10.0/TUnitExamples.TUnitRunner*.dll --coverage --coverage-output-format cobertura --report-trx --results-directory ./TestResults/TUnit"
 
 [tasks.test-xunit]
 usage = 'arg "[configuration]" default="Debug"'
 depends = ["build {{usage.configuration}}"]
 description = "Runs xUnit tests"
-run = "dotnet run --project TUnitExamples.xUnit --configuration {{usage.configuration}} --coverage --coverage-output-format cobertura --report-xunit-trx --results-directory ./TestResults/xUnit"
+run = "dotnet test --test-modules **/bin/{{usage.configuration}}/net10.0/TUnitExamples.xUnitRunner*.dll --coverage --coverage-output-format cobertura --report-xunit-trx --results-directory ./TestResults/xUnit"
 
 [tasks.tunit-report]
 description = "Generates a coverage report from TUnit coverage files"
