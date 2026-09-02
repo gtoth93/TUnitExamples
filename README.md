@@ -10,7 +10,7 @@ API, taking inspiration from NUnit and xUnit. It generally tries to be batteries
 
 ## Adding a TUnit test project
 
-There are two ways to install TUnit.you either install the templates with
+There are two ways to install TUnit:
 
 - With templates
   - Install templates: `dotnet new install TUnit.Templates`
