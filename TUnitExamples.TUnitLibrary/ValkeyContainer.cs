@@ -1,5 +1,3 @@
-// Copyright (c) Asura Technologies Ltd. All Rights Reserved.
-
 using System.Diagnostics.CodeAnalysis;
 using DotNet.Testcontainers.Containers;
 using Testcontainers.Redis;

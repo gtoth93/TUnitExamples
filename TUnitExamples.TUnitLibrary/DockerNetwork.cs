@@ -1,5 +1,3 @@
-// Copyright (c) Asura Technologies Ltd. All Rights Reserved.
-
 using DotNet.Testcontainers.Builders;
 using DotNet.Testcontainers.Networks;
 using TUnit.Core.Interfaces;
